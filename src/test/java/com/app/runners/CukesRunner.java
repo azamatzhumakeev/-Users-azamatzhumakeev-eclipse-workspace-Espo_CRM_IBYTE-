@@ -9,7 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		},
 		tags = "@dev",
 		features="src/test/resources/com/app/features/",
-		glue="com/app/step_definitions/",
+		glue="com/app/step_definition/",
 		dryRun=false 
 )
 public class CukesRunner extends AbstractTestNGCucumberTests {
