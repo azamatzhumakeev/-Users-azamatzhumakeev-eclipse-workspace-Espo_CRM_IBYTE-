@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[<div "result">I logged into Espo (PASSED : 5s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User open Opportunity page (PASSED : 1s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User click create opportunity buttom (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User enter name &quot;Mason Smith&quot; (PASSED : 2s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User enter amount &quot;1000&quot; (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User chose date (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User click save bottom (PASSED : 0s)</div>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="14399" started-at="2018-04-10T00:03:05Z" finished-at="2018-04-10T00:03:20Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.app.runners.CukesRunner@3f49dace]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="14399" started-at="2018-04-10T00:03:05Z" finished-at="2018-04-10T00:03:20Z">
+      <class name="com.app.runners.CukesRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.app.runners.CukesRunner@3f49dace]" name="setUpClass" is-config="true" duration-ms="204" started-at="2018-04-10T00:03:05Z" finished-at="2018-04-10T00:03:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.app.runners.CukesRunner@3f49dace]" name="runScenario" duration-ms="8321" started-at="2018-04-10T00:03:05Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-04-10T00:03:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Log in"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create opportunities"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<div "result">I logged into Espo (PASSED : 5s)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.app.runners.CukesRunner@3f49dace]" name="runScenario" duration-ms="5805" started-at="2018-04-10T00:03:14Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-04-10T00:03:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create opportunity"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create opportunities"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<div "result">User open Opportunity page (PASSED : 1s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User click create opportunity buttom (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User enter name &quot;Mason Smith&quot; (PASSED : 2s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User enter amount &quot;1000&quot; (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User chose date (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User click save bottom (PASSED : 0s)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.app.runners.CukesRunner@3f49dace]" name="tearDownClass" is-config="true" duration-ms="12" started-at="2018-04-10T00:03:20Z" finished-at="2018-04-10T00:03:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.app.runners.CukesRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
