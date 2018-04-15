@@ -31,5 +31,6 @@ public class LoginPage {
 		loginBtn.click();
 	}
 	
+	//delete this is for test
 }
 
