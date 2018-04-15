@@ -37,8 +37,7 @@ public class Create_Opportunity_Page {
 	@FindBy(xpath="//input[@name='probability']")
 	public WebElement probability;
 	
-	@FindBy(xpath="//h4[contains(text(),'Overview')]")
-	public WebElement overviewPage;
+	
 	
 	
 	
