@@ -7,10 +7,10 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		plugin = {"pretty", 
 				"html:target/cucumber-report"
 		},
-		tags = "@dev",
+		tags = "@smoke",
 		features="src/test/resources/com/app/features/",
-		glue="com/app/step_definitions/",
-		dryRun=false 
+		glue="com/app/step_definition/",
+		dryRun=false
 )
 public class CukesRunner extends AbstractTestNGCucumberTests {
 
