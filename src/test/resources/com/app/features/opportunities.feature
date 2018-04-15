@@ -1,9 +1,15 @@
 Feature: Create opportunities
+
+@devv
+Scenario: Log in
+Given I logged into Espo
+
 @dev
 Scenario: Log in
 Given I logged into Espo
 
 @dev
+
 Scenario: Create opportunity
 And User open Opportunity page
 And User click create opportunity buttom
@@ -13,7 +19,7 @@ And User chose date
 When User click save bottom
 
 
-
+@devv
 Scenario: Create new opportunity
 And User open Opportunity page
 And User click create opportunity buttom
