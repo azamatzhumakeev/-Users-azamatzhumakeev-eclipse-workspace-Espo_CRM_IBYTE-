@@ -17,6 +17,8 @@ public class AccountsPage {
 		PageFactory.initElements(driver, this);
 	}
 	
+	/// delete this line 
+	
 	@FindBy(linkText="Accounts")
 	public WebElement accounts;
 	
