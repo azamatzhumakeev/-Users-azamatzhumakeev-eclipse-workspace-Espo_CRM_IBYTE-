@@ -59,6 +59,34 @@ public class AccountsPage {
 	@FindBy(xpath="//tbody/tr[1]/td//a[1]")  	
 	public WebElement nameInTheList;
 	
+	@FindBy(id="nofitication")
+	public WebElement notification;
+	
+	@FindBy(xpath="//input[@class='record-checkbox']")
+	public WebElement checkmarkAccount;
+	
+	@FindBy(linkText="Remove")
+	public WebElement remove;
+	
+	@FindBy(xpath="//button[@class='btn btn-danger']")
+	public WebElement popupRemove;
+	
+	@FindBy(xpath="//button[@class='btn btn-default dropdown-toggle actions-button']")
+	public WebElement actionsButton;
+	
+	@FindBy(id="popup-notifications-container")
+	public WebElement popupNotofication;
+	
+	@FindBy(xpath="//button[.='Cancel']")
+	public WebElement popupCancel;
+	
+	@FindBy(xpath="//div[@class='text-muted total-count']")
+	public WebElement totalNumberOfAccounts;
+	
+	@FindBy(xpath="//button[@data-action='reset']")
+	public WebElement resetButton;
+	
+	
 	
 
 	public void selectType() {
