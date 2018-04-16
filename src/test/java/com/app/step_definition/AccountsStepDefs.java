@@ -36,6 +36,7 @@ public class AccountsStepDefs {
 	public void user_opens_accounts_page(){
 		BrowserUtils.waitFor(3);
 		accountsPage.accounts.click();
+		BrowserUtils.waitFor(3);
 	}
 
 	@Given("^User clicks on create account button$")
@@ -76,9 +77,9 @@ public class AccountsStepDefs {
 
 	@When("^User clicks on the save button$")
 	public void user_clicks_on_the_save_button() {
-		BrowserUtils.waitFor(3);
-		accountsPage.save.click();
 		
+		accountsPage.save.click();
+		BrowserUtils.waitFor(3);
 		try {
 			Driver.getDriver().manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 			accountsPage.saveDuplicate.click();
@@ -91,7 +92,7 @@ public class AccountsStepDefs {
 
 	@Then("^User should see contact information for \"([^\"]*)\"$")
 	public void user_should_see_contact_information_for(String name){
-		
+		BrowserUtils.waitFor(2);
 		assertEquals(accountsPage.nameConfirm.getText(), name);
 		BrowserUtils.waitFor(3);
 	}

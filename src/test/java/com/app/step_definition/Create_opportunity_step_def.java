@@ -30,7 +30,7 @@ public class Create_opportunity_step_def {
 	@Given("^User open Opportunity page$")
 	public void user_open_Opportunity_page() {
 		createOpporPage.opportunities.click();
-		BrowserUtils.waitFor(2);
+		BrowserUtils.waitFor(3);
 	}
 
 	@Given("^User click create opportunity buttom$")
