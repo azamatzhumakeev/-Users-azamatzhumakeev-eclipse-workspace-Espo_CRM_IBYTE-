@@ -1,4 +1,7 @@
 
+
+
+
 package com.app.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,6 +34,6 @@ public class LoginPage {
 		loginBtn.click();
 	}
 	
-	//delete this is for test
+	
 }
 
