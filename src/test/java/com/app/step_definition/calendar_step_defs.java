@@ -5,6 +5,8 @@ import static com.app.utilities.ConfigurationReader.*;
 import static org.testng.Assert.*;
 
 import com.app.pages.Calendar;
+import com.app.utilities.BrowserUtils;
+
 import static  com.app.utilities.Page.*;
 import static com.app.utilities.Driver.*;
 
@@ -26,12 +28,14 @@ public class calendar_step_defs {
 	    cl.login(getProperty("username"), getProperty("password"));
 	    assertEquals(cl.getDisplayedUsername(), userName, "Invalid User");
 	    cl.goToCalendarPage();
+	    BrowserUtils.waitFor(3);
 	}
 
 	@When("^User double clicks on a \"([^\"]*)\"$")
 	public void user_double_clicks_on_a(String numOfdays) {
+		BrowserUtils.waitFor(2);
 	    cl.clickCalendarCellForGivenDate(numOfdays);
-	    
+	    BrowserUtils.waitFor(2);
 	}
 
 	@Then("^Create event window opens$")
