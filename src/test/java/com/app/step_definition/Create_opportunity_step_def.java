@@ -5,6 +5,7 @@ import org.testng.Assert;
 
 import com.app.pages.Create_Opportunity_Page;
 import com.app.pages.LoginPage;
+import com.app.utilities.BrowserUtils;
 import com.app.utilities.ConfigurationReader;
 import com.app.utilities.Driver;
 
@@ -29,11 +30,13 @@ public class Create_opportunity_step_def {
 	@Given("^User open Opportunity page$")
 	public void user_open_Opportunity_page() {
 		createOpporPage.opportunities.click();
+		BrowserUtils.waitFor(2);
 	}
 
 	@Given("^User click create opportunity buttom$")
 	public void user_click_create_opportunity_buttom() {
 		createOpporPage.createOpportunitiesBtn.click();
+		BrowserUtils.waitFor(2);
 	}
 
 	@Given("^User enter name \"([^\"]*)\"$")
@@ -54,8 +57,13 @@ public class Create_opportunity_step_def {
 	@When("^User click save bottom$")
 	public void user_click_save_bottom() {
 	    createOpporPage.saveBtn.click();
+	    BrowserUtils.waitFor(2);
 	}
-
+	@Given("^User change probability (\\d+) to (\\d+)$")
+	public void user_change_probability_to(int arg1, int arg2) throws Throwable {
+		createOpporPage.probability.clear();
+		createOpporPage.probability.sendKeys("5");
+	}
 	
 	}
 
