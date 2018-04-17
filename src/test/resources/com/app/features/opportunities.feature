@@ -5,7 +5,7 @@ Background:
 Given I logged into Espo
 
 
-
+@oppor @regression
 Scenario: Create opportunity
 And User open Opportunity page
 And User click create opportunity buttom
@@ -15,7 +15,7 @@ And User chose date
 When User click save bottom
 
 
-@dev
+@oppor @regression
 Scenario: Create new opportunity
 And User open Opportunity page
 And User click create opportunity buttom
@@ -24,5 +24,9 @@ And User enter amount "500"
 And User change probability 10 to 5
 And User chose date
 When User click save bottom
+
+@smoke
+Scenario: for Smoke
+And User open Opportunity page
 
 

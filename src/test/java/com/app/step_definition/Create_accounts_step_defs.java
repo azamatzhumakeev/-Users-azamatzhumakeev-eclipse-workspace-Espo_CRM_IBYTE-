@@ -18,7 +18,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class AccountsStepDefs {
+public class Create_accounts_step_defs {
 	
 	private WebDriver driver = Driver.getDriver();
 	LoginPage loginPage = new LoginPage();
@@ -33,15 +33,12 @@ public class AccountsStepDefs {
 	}
 	
 	@Given("^User opens accounts page$")
-	public void user_opens_accounts_page(){
-		BrowserUtils.waitFor(3);
+	public void user_opens_accounts_page(){		
 		accountsPage.accounts.click();
-		BrowserUtils.waitFor(3);
 	}
 
 	@Given("^User clicks on create account button$")
-	public void user_clicks_on_create_account_button() {
-		BrowserUtils.waitFor(3);
+	public void user_clicks_on_create_account_button() {		
 	  accountsPage.createAccount.click();
 	}
 
@@ -76,10 +73,10 @@ public class AccountsStepDefs {
 	}
 
 	@When("^User clicks on the save button$")
-	public void user_clicks_on_the_save_button() {
-		
+	public void user_clicks_on_the_save_button() {	
+		BrowserUtils.waitFor(2);
 		accountsPage.save.click();
-		BrowserUtils.waitFor(3);
+		BrowserUtils.waitFor(2);
 		try {
 			Driver.getDriver().manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 			accountsPage.saveDuplicate.click();
@@ -92,19 +89,35 @@ public class AccountsStepDefs {
 
 	@Then("^User should see contact information for \"([^\"]*)\"$")
 	public void user_should_see_contact_information_for(String name){
-		BrowserUtils.waitFor(2);
+		BrowserUtils.waitFor(4);		
 		assertEquals(accountsPage.nameConfirm.getText(), name);
-		BrowserUtils.waitFor(3);
+		
 	}
 	
 
 	
 	@Then("^User should see new created account \"([^\"]*)\" on the accounts page$")
 	public void user_should_see_new_created_account_on_the_accounts_page(String name) {
-		BrowserUtils.waitFor(2);
-		accountsPage.accounts.click();		
+		accountsPage.accounts.click();	
+		BrowserUtils.waitFor(4);
 		assertEquals(accountsPage.nameInTheList.getText(), name);
 	}
+	
+	
+	@Then("^\"([^\"]*)\" should be displayed$")
+	public void should_be_displayed(String alert) {
+		BrowserUtils.waitForVisibility(accountsPage.notification, 5);
+		//BrowserUtils.fluentWait(accountsPage.notification, 5);
+		System.out.println(accountsPage.notification.getText());
+		assertEquals(accountsPage.notification.getText(), alert);
+		
+	}
+	
+	@When("^User clicks on the Save button$")
+	public void user_clicks_on_the_Save_button() {
+		accountsPage.save.click();
+	}
+
 
 
 }

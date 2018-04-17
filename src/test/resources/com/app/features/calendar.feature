@@ -10,7 +10,7 @@ Feature: Calendar functionalities
    #In examples table's date coloum please put a number which refers to a number of days from today...
    #In ex: 1 is tomorrow, 2 is 2 days from today
   #@smoke @regression @dev
-  @dev
+  #@calendar @regression
   Scenario Outline: Create a meeting in calendar with required fields only
     Given User is logged in as an "Admin"
     When User double clicks on a "<date>"
