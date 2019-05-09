@@ -1,5 +1,7 @@
 
 
+
+
 package com.app.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,6 +33,7 @@ public class LoginPage {
 		password.sendKeys(pwd);
 		loginBtn.click();
 	}
+	
 	
 }
 
